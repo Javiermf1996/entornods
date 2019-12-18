@@ -60,7 +60,7 @@ services:
       context: './laravel'
       args:
         uid: ${UID}
-    container_name: laravel
+    container_name: laravel19
     depends_on:
       - db
     environment:
@@ -68,7 +68,7 @@ services:
       - APACHE_RUN_GROUP=#${UID}
       - VIRTUAL_HOST=laravel.local
     volumes:
-      - ./data/laravel:/var/www/html
+      - ./data/laravel19:/var/www/html
     networks:
       - frontend
       - backend
